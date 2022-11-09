@@ -1,4 +1,7 @@
 # Tetra_Simulink
+
+This simulates the motion of modular tetrahedral-shaped aerial robots.
+
 Author: Mohamad T. Shahab
 
 developed with help from Obadah Wali, 12 Sep 2022
