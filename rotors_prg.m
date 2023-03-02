@@ -354,14 +354,6 @@ xticks([0:.5:stoptime])
 
 tsmf=50;
 
-% figure(2)
-% subplot(311)
-% plot(out.euler.Time(end-tsmf:end),(des_r-out.euler.Data(end-tsmf:end,3)));hold on
-% subplot(312)
-% plot(out.euler.Time(end-tsmf:end),(des_p-out.euler.Data(end-tsmf:end,2)));hold on
-% subplot(313)
-% plot(out.position.Time(end-tsmf:end),(des_alt-out.position.Data(end-tsmf:end,3)));hold on
-
 
 
 if nn==0
@@ -430,80 +422,9 @@ end
 
 end
 
-% Cx1=Ixx4./(Ixx1*4);
-% % C2=C1;
-% % Khat=KP2x./KP1x;
-% % C3=(1+1/Khat)*C1 - 1;
-% Cy1=Iyy4./(Iyy1*4);
-% Cz1=Izz4./(Izz1*4);
-% 
-% Cx1=1*Cx1;
-% Cy1=1*Cy1;
-% Cz1=1*Cz1;
-% 
-% KP2x=(Cx1)*KP2x;
-% KIx=(Cx1)*KIx;
-% KP1x=(Cx1)*KP1x;
-% KDx=(Cx1)*KDx;
-% 
-% KP2y=(Cy1)*KP2y;
-% KIy=(Cy1)*KIy;
-% KP1y=(Cy1)*KP1y;
-% KDy=(Cy1)*KDy;
-% 
-% KP2z=(Cz1)*KP2z;
-% KIz=(Cz1)*KIz;
-% KP1z=(Cz1)*KP1z;
-% KDz=(Cz1)*KDz;
-% 
-% mass=4*mass1;
-% inertia=inertia4;
-% rotorPositions=rotorPositions4;
-% 
-% model='att_control_FourModules_v5';
-% 
-% load_system(model);
-% out=sim(model,stoptime);
-% 
-% 
-% 
-% figure(1)
-% subplot(311)
-% plot(out.euler.Time,out.euler.Data(:,3));hold on
-% subplot(312)
-% plot(out.euler.Time,out.euler.Data(:,2));hold on
-% subplot(313)
-% plot(out.position.Time,out.position.Data(:,3));hold on
-% 
-% 
-% x00=out.euler.Data(:,3)-out.euler.Data(1,3);
-% x01=x00*(1/x00(end));
-% 
-% stpinfo=stepinfo(x01,out.euler.Time,1,0);
-% R4c=stpinfo.SettlingTime
-% 
-% x00=out.euler.Data(:,2)-out.euler.Data(1,2);
-% x01=x00*(1/x00(end));
-% 
-% stpinfo=stepinfo(x01,out.euler.Time,1,0);
-% P4c=stpinfo.SettlingTime
-% 
-% x00=out.position.Data(:,3)-out.position.Data(1,3);
-% x01=x00*(1/x00(end));
-% 
-% stpinfo=stepinfo(x01,out.euler.Time,1,0);
-% Zrc=stpinfo.SettlingTime
 
 hold off
 
-
-% figure(2)
-% subplot(311)
-% plot(out.euler.Time(end-tsmf:end),(des_r-out.euler.Data(end-tsmf:end,3)));hold on
-% subplot(312)
-% plot(out.euler.Time(end-tsmf:end),(des_p-out.euler.Data(end-tsmf:end,2)));hold on
-% subplot(313)
-% plot(out.position.Time(end-tsmf:end),(des_alt-out.position.Data(end-tsmf:end,3)));hold on
 
 hold off
 
